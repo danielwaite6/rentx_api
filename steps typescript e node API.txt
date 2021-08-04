@@ -1,0 +1,27 @@
+yarn init -y
+yarn add typescript -D
+yarn tsc --init
+
+antes de rodar o comando abaixo é necessario criar um arquivo index.ts
+pra se certificar de possiveis erros que possam acontecer.
+
+yarn tsc  (RODAR ESTE COMANDO PARA FAZER O NODE ENTENDER O TYPESCRIPT NO PROJETO).
+
+INSTALAR O EXPRESS QUE SE ENCONTRA NO SITE - www.expressjs.com -
+
+yarn add express
+
+yarn add @types/express
+
+INCLUIR AGORA NO PACKAGE.JSON O SEGUINTE SCRIPT:
+
+"scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
+
+depois de INCLUIR, instalar com o comando: yarn add ts-node-dev -D
+para que realmente o script acima funcione.
+
+ESSE SCRIPT ACIMA PERMITE INICIAR O ARQUIVO "server.ts" A PARTIR DO COMANDO:   yarn dev
+
+
