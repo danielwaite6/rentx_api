@@ -1,0 +1,16 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "qwe",
+    "database": "api_rentx",
+    "synchronize": true,
+    "logging": true,
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    },
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ]
+}
