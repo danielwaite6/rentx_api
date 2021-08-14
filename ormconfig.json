@@ -6,7 +6,7 @@
     "password": "qwe",
     "database": "api_rentx",
     "synchronize": true,
-    "logging": true,
+    "logging": false,
     "entities": [
         "src/modules/cars/entities/*.ts",
         "src/modules/accounts/entities/*.ts"
