@@ -7,6 +7,9 @@
     "database": "api_rentx",
     "synchronize": true,
     "logging": true,
+    "entities": [
+        "src/modules/cars/entities/*.ts"
+    ],
     "cli": {
         "migrationsDir": "./src/database/migrations"
     },

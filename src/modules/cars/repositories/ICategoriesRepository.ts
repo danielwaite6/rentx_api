@@ -1,15 +1,15 @@
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
 
 // DTO - DATA TRANSFER OBJECT.
-interface ICreateCategory {
+interface ICreateCategoryDTO {
     name: string,
     description: string
 }
 
 interface ICategoriesRepository {
-    create({ name, description }: ICreateCategory): void
-    findByName(name: string): Category;
-    list(): Category[];
+    findByName(name: string): Promise<Category>;
+    list(): Promise<Category[]>;
+    create({ name, description }: ICreateCategoryDTO): Promise<void>;
 };
 
-export { ICategoriesRepository, ICreateCategory };
+export { ICategoriesRepository, ICreateCategoryDTO };
