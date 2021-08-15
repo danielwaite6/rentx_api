@@ -25,6 +25,10 @@ async function ensureAuthenticated(request: Request, response: Response, next: N
 
         if (!user) {
             throw new AppError("User Does Not Exists", 401);
+        };
+
+        request.user = {
+            id: user_id,
         }
 
         next();
