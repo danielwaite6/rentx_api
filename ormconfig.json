@@ -8,13 +8,13 @@
     "synchronize": true,
     "logging": false,
     "entities": [
-        "src/modules/cars/entities/*.ts",
-        "src/modules/accounts/entities/*.ts"
+        "src/modules/cars/infra/typeorm/entities/*.ts",
+        "src/modules/accounts/infra/typeorm/entities/*.ts"
     ],
     "cli": {
-        "migrationsDir": "./src/database/migrations"
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
     },
     "migrations": [
-        "./src/database/migrations/*.ts"
+        "./src/shared/infra/typeorm/migrations/*.ts"
     ]
 }
