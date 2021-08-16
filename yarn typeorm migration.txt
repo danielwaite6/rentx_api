@@ -5,3 +5,4 @@ yarn typeorm migration:run -----> RODA A MIGRATION - CRIA EFETIVAMENTE A TABELA 
 
 yarn typeorm migration:revert-----> DESFAZ/APAGA A EFETIVAMENTE A TABELA NO BANCO DE DADOS.
 
+yarn typeorm schema:drop   ---> APAGA TODAS AS TABELAS DO BANCO
