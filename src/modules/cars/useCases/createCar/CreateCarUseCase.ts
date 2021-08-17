@@ -38,8 +38,6 @@ class CreateCarUseCase {
         const carAlreadyExists = await this.carsRepository.findByLicensePlate(license_plate);
 
 
-        //console.log("license_plate: ", carAlreadyExists.license_plate);
-
         if (carAlreadyExists) {
             throw new AppError("Carro já existe");
         }
@@ -55,8 +53,6 @@ class CreateCarUseCase {
             category_id
         });
 
-        console.log('license_plate:', car.license_plate);
-        console.log('license_plate:', typeof car.license_plate);
 
         return car;
     }

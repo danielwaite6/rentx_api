@@ -17,10 +17,6 @@ class CreateCarController {
             category_id,
         } = request.body;
 
-        console.log('license_plate: ', license_plate);
-        console.log('license_plate: ', typeof license_plate);
-
-
 
         const createCarUseCase = container.resolve(CreateCarUseCase);
 
