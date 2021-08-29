@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+//import { Rental } from '../../infra/typeorm/entities/Rental';
 import { CreateRentalUseCase } from './CreateRentalUseCase';
 
 class CreateRentalController {
@@ -12,8 +13,6 @@ class CreateRentalController {
 
         const createRentalUseCase = container.resolve(CreateRentalUseCase);
 
-
-        //console.log('Rental:', createRentalUseCase);
 
         const rental = await createRentalUseCase.execute({
             car_id,

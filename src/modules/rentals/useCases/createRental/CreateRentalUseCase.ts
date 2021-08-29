@@ -27,9 +27,6 @@ class CreateRentalUseCase {
 
     async execute({ car_id, user_id, expected_return_date }: IRequest): Promise<Rental> {
 
-        console.log("HI:", car_id, user_id, expected_return_date);
-
-
         const minimunHour = 24;
 
 
@@ -60,7 +57,7 @@ class CreateRentalUseCase {
         }
 
 
-        const rental = this.rentalsRepository.create({
+        const rental = await this.rentalsRepository.create({
             user_id,
             car_id,
             expected_return_date,

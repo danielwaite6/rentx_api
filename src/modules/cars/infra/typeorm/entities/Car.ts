@@ -49,6 +49,7 @@ class Car {
     created_at: Date;
 
     constructor() {
+
         if (!this.id) {
             this.id = uuiV4();
         }

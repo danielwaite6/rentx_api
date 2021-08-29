@@ -8,7 +8,12 @@ class RentalsRepository implements IRentalsRepository {
     private repository: Repository<Rental>;
 
     constructor() {
+
+        //console.log("calha1");
         this.repository = getRepository(Rental);
+        /**if (this.repository) {
+            console.log("calha2");
+        } */
     };
 
     async findOpenRentalByCar(car_id: string): Promise<Rental> {
@@ -22,9 +27,7 @@ class RentalsRepository implements IRentalsRepository {
     };
 
     async create({ car_id, user_id, expected_return_date }: ICreateRentalDTO): Promise<Rental> {
-        //console.log("hi");
 
-        //console.log(car_id, user_id, expected_return_date);
 
         const rental = this.repository.create({
             car_id,
@@ -32,9 +35,6 @@ class RentalsRepository implements IRentalsRepository {
             user_id,
         });
         await this.repository.save(rental);
-
-        console.log('Rental:', rental);
-
 
         return rental;
     };
