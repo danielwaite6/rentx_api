@@ -16,13 +16,13 @@ class Rental {
     @Column()
     start_date: Date;
 
-    @Column()
+    @Column({ nullable: true })
     end_date: Date;
 
-    @Column()
+    @Column({ nullable: true })
     expected_return_date: Date;
 
-    @Column()
+    @Column({ nullable: true })
     total: number;
 
     @CreateDateColumn()
@@ -34,6 +34,7 @@ class Rental {
     constructor() {
         if (!this.id) {
             this.id = uuidV4();
+            this.start_date = new Date();
         }
     }
 
