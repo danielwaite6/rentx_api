@@ -56,6 +56,6 @@ export class CreateSpecificationsCars1629421878736 implements MigrationInterface
             "specifications_cars", "FKSpecificationCar",
         );
         await queryRunner.dropTable("specifications_cars");
-    }
+    };
 
 }
